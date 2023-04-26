@@ -54,7 +54,6 @@ async function getWeather(country) {
 }
 
 searchBtn.addEventListener('click', function () {
-    displayDate()
     getWeather(searchInp.value)
 })
 

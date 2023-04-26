@@ -27,7 +27,8 @@
             <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
                 <div class="container d-flex justify-content-evenly align-items-start">
 
-                    <a href="index.html" class="logo-link text-decoration-none">
+                    <a class="navbar-brand" href="index.html">
+
                         <div class="logo-sec d-flex justify-content-center align-items-center">
                             <img src="https://routeweather.netlify.app/images/logo@2x.png" alt="logo"
                                 class="logoPic mx-3" width="64" height="38">
@@ -38,34 +39,39 @@
                         </div>
                     </a>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-wh">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">News</a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Live Cameras</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Photos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact Us</a>
+                                <a class="nav-link" href="#">Live Camera</a>
                             </li>
 
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Photo</a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact us</a>
+                            </li>
                         </ul>
+
                     </div>
                 </div>
             </nav>
+
+
             <img src="images/wave (4).svg" alt="waves" class="waves">
         </div>
         <!-- -------------- -->
@@ -76,7 +82,7 @@
             <!-- Search Input-->
             <div class="search">
                 <form class="d-flex justify-content-center search-form m-auto w-50">
-                    <input class="form-control mx-2 py-2 rounded-pill" type="search" placeholder="Find Your Location..."
+                    <input class="form-control mx-2 py-2 rounded-pill" type="search" placeholder="Location..."
                         id="searchInp" aria-label="Search">
                     <button class="btn s-btn btn-outline-info text-primary py-2 px-4 rounded-pill" type="submit"
                         id="searchBtn">Find</button>
@@ -88,88 +94,117 @@
                 <div class="container">
                     <div class="card-group">
                         <!-- Today Weather -->
-                        <div class="card border border-5 text-white">
-                            <div class="card-footer header d-flex justify-content-between">
-                                <small id="today" class="text-white">Wednesday</small>
-                                <small id="todayDate" class="text-white">22February</small>
-                            </div>
-
-                            <div class="card-body">
-                                <small id="capital" class="text-white fs-5"></small>
-
-                                <div class="degreeToday d-flex justify-content-start">
-                                    <h1 id="degreeToday" class="card-title"></h1>
-
-                                    <h1>&deg;C</h1>  
-                                    <span class="ps-5">
-                                        <img id="iconToday" src="https://cdn.weatherapi.com/weather/64x64/night/116.png" alt=""
-                                            width="90">
-                                    </span>
-                                </div>
-                            
-
-                                <small id="condtionToday" class="text-secondary h5  my-2">Cloudy</small>
-
-                                <div class="info d-flex justify-content-around align-items-center mt-4">
-                                    <div class="rain">
-                                        <span id="rain" class="mx-2"></span> <i class="fa-solid fa-umbrella"></i>
-                                    </div>
-
-                                    <div class="wind">
-                                        <span id="wind" class="mx-2"></span> <i class="fa-solid fa-wind"></i>
-                                    </div>
-
-                                    <div class="dir">
-                                        <span id="dirc" class="mx-2"></span> <i class="fa-regular fa-compass"></i>
-                                    </div>
-
-
+                        <div class="col-md-4 mb-3 mb-sm-0">
+                            <div class="card  border-5 text-white">
+                                <div class="card-footer header d-flex justify-content-between">
+                                    <small id="today" class="text-white">Wednesday</small>
+                                    <small id="todayDate" class="text-white">22February</small>
                                 </div>
 
+                                <div class="card-body">
+                                    <small id="capital" class="text-white fs-5"></small>
+
+                                    <div class="degreeToday d-flex justify-content-start">
+                                        <h1 id="degreeToday" class="card-title"></h1>
+
+                                        <h1>&deg;C</h1>
+                                        <span class="ps-5">
+                                            <img id="iconToday"
+                                                src="https://cdn.weatherapi.com/weather/64x64/night/116.png" alt=""
+                                                width="90">
+                                        </span>
+                                    </div>
+
+
+                                    <small id="condtionToday" class="text-secondary h5  my-2">Cloudy</small>
+
+                                    <div class="info d-flex justify-content-around align-items-center mt-4">
+                                        <div class="rain">
+                                            <span id="rain" class="mx-2"></span> <i class="fa-solid fa-umbrella"></i>
+                                        </div>
+
+                                        <div class="wind">
+                                            <span id="wind" class="mx-2"></span> <i class="fa-solid fa-wind"></i>
+                                        </div>
+
+                                        <div class="dir">
+                                            <span id="dirc" class="mx-2"></span> <i class="fa-regular fa-compass"></i>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
                             </div>
+
                         </div>
+
+
+
 
                         <!-- Towmorrow Weather -->
-                        <div class="card border border-5 text-white">
-                            <div class="card-footer header d-flex justify-content-center">
-                                <small class="text-white">Wednesday</small>
-                            </div>
-                            <div class="card-body text-center d-flex justify-content-center align-items-center flex-column mx-3">
-                                <img class="d-block" id="iconTom" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather"
-                                    width="48">
-                                <div class="max">
-                                    <span id="maxDegreeTom" class="card-title2 m-0 pt-4 h2"></span><span>&deg;C</span>
+
+                        <div class="col-md-4 mb-3 mb-sm-0">
+                            <div class="card border border-5 text-white">
+                                <div class="card-footer header d-flex justify-content-center">
+                                    <small class="text-white">Wednesday</small>
                                 </div>
+                                <div
+                                    class="card-body text-center d-flex justify-content-center align-items-center flex-column mx-3">
+                                    <img class="d-block" id="iconTom"
+                                        src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather"
+                                        width="48">
+                                    <div class="max">
+                                        <span id="maxDegreeTom"
+                                            class="card-title2 m-0 pt-4 h2"></span><span>&deg;C</span>
+                                    </div>
 
-                                <div class="min">
-                                    <small id="minDegreeTom" class="text-secondary"></small> <span class="text-secondary">&deg;C</span>
+                                    <div class="min">
+                                        <small id="minDegreeTom" class="text-secondary"></small> <span
+                                            class="text-secondary">&deg;C</span>
+                                    </div>
+
+
+                                    <h6 id="condtionTom" class="text-secondary mx-3 mt-3"></h6>
                                 </div>
-
-
-                                <h6 id="condtionTom" class="text-secondary mx-3 mt-3"></h6>
                             </div>
+
                         </div>
+
+
+
 
                         <!-- After Towmorrow Weather -->
-                        <div class="card border border-5 text-white">
-                            <div class="card-footer header d-flex justify-content-center">
-                                <small class="text-white">Wednesday</small>
-                            </div>
-                            <div class="card-body text-center d-flex justify-content-center align-items-center flex-column mx-3">
-                                <img class="d-block" id="iconAfter" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather"
-                                    width="48">
-                                <div class="max">
-                                    <span id="maxDegreeAfter" class="card-title2 m-0 pt-4 h2"></span><span>&deg;C</span>
+
+                        <div class="col-md-4 mb-3 mb-sm-0">
+
+                            <div class="card border border-5 text-white">
+                                <div class="card-footer header d-flex justify-content-center">
+                                    <small class="text-white">Wednesday</small>
                                 </div>
+                                <div
+                                    class="card-body text-center d-flex justify-content-center align-items-center flex-column mx-3">
+                                    <img class="d-block" id="iconAfter"
+                                        src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather"
+                                        width="48">
+                                    <div class="max">
+                                        <span id="maxDegreeAfter"
+                                            class="card-title2 m-0 pt-4 h2"></span><span>&deg;C</span>
+                                    </div>
 
-                                <div class="min">
-                                    <small id="minDegreeAfter" class="text-secondary"></small> <span class="text-secondary">&deg;C</span>
+                                    <div class="min">
+                                        <small id="minDegreeAfter" class="text-secondary"></small> <span
+                                            class="text-secondary">&deg;C</span>
+                                    </div>
+
+
+                                    <h6 id="condtionAfter" class="text-secondary mx-3 mt-3"></h6>
                                 </div>
-
-
-                                <h6 id="condtionAfter" class="text-secondary mx-3 mt-3"></h6>
                             </div>
+
+
                         </div>
+
 
                     </div>
                 </div>
