@@ -28,7 +28,7 @@ getWeather("cairo")
 
 
 async function getWeather(country) {
-    let weatherResp = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=9939101afdc3426093b131752232402&q=${country}&days=3&aqi=no&alerts=no`)
+    let weatherResp = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=9939101afdc3426093b131752232402&q=${country}&days=3&aqi=no&alerts=no`)
     let weatherData = await weatherResp.json()
     console.log(weatherData)
 
