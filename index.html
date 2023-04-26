@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Weather</title>
+</head>
+
+<body>
+    <div class="full-page">
+
+        <!-- Navigation Bar -->
+        <div class="navigation">
+            <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+                <div class="container d-flex justify-content-evenly align-items-start">
+
+                    <a href="index.html" class="logo-link text-decoration-none">
+                        <div class="logo-sec d-flex justify-content-center align-items-center">
+                            <img src="https://routeweather.netlify.app/images/logo@2x.png" alt="logo"
+                                class="logoPic mx-3" width="64" height="38">
+                            <div class="logo d-flex flex-column justify-content-around align-items-center">
+                                <h1 class="site-title h6 m-0 text-white">Weather</h1>
+                                <small class="site-description fs-6 text-secondary">tagline goes here</small>
+                            </div>
+                        </div>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Live Cameras</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Photos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <img src="images/wave (4).svg" alt="waves" class="waves">
+        </div>
+        <!-- -------------- -->
+
+        <!-- Main Section of the Website -->
+        <div class="main">
+
+            <!-- Search Input-->
+            <div class="search">
+                <form class="d-flex justify-content-center search-form m-auto w-50">
+                    <input class="form-control mx-2 py-2 rounded-pill" type="search" placeholder="Find Your Location..."
+                        id="searchInp" aria-label="Search">
+                    <button class="btn s-btn btn-outline-info text-primary py-2 px-4 rounded-pill" type="submit"
+                        id="searchBtn">Find</button>
+                </form>
+            </div>
+
+            <!-- Cards Input-->
+            <div class="weather">
+                <div class="container">
+                    <div class="card-group">
+                        <!-- Today Weather -->
+                        <div class="card border border-5 text-white">
+                            <div class="card-footer header d-flex justify-content-between">
+                                <small id="today" class="text-white">Wednesday</small>
+                                <small id="todayDate" class="text-white">22February</small>
+                            </div>
+
+                            <div class="card-body">
+                                <small id="capital" class="text-white fs-5"></small>
+
+                                <div class="degreeToday d-flex justify-content-start">
+                                    <h1 id="degreeToday" class="card-title"></h1>
+
+                                    <h1>&deg;C</h1>  
+                                    <span class="ps-5">
+                                        <img id="iconToday" src="https://cdn.weatherapi.com/weather/64x64/night/116.png" alt=""
+                                            width="90">
+                                    </span>
+                                </div>
+                            
+
+                                <small id="condtionToday" class="text-secondary h5  my-2">Cloudy</small>
+
+                                <div class="info d-flex justify-content-around align-items-center mt-4">
+                                    <div class="rain">
+                                        <span id="rain" class="mx-2"></span> <i class="fa-solid fa-umbrella"></i>
+                                    </div>
+
+                                    <div class="wind">
+                                        <span id="wind" class="mx-2"></span> <i class="fa-solid fa-wind"></i>
+                                    </div>
+
+                                    <div class="dir">
+                                        <span id="dirc" class="mx-2"></span> <i class="fa-regular fa-compass"></i>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Towmorrow Weather -->
+                        <div class="card border border-5 text-white">
+                            <div class="card-footer header d-flex justify-content-center">
+                                <small class="text-white">Wednesday</small>
+                            </div>
+                            <div class="card-body text-center d-flex justify-content-center align-items-center flex-column mx-3">
+                                <img class="d-block" id="iconTom" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather"
+                                    width="48">
+                                <div class="max">
+                                    <span id="maxDegreeTom" class="card-title2 m-0 pt-4 h2"></span><span>&deg;C</span>
+                                </div>
+
+                                <div class="min">
+                                    <small id="minDegreeTom" class="text-secondary"></small> <span class="text-secondary">&deg;C</span>
+                                </div>
+
+
+                                <h6 id="condtionTom" class="text-secondary mx-3 mt-3"></h6>
+                            </div>
+                        </div>
+
+                        <!-- After Towmorrow Weather -->
+                        <div class="card border border-5 text-white">
+                            <div class="card-footer header d-flex justify-content-center">
+                                <small class="text-white">Wednesday</small>
+                            </div>
+                            <div class="card-body text-center d-flex justify-content-center align-items-center flex-column mx-3">
+                                <img class="d-block" id="iconAfter" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather"
+                                    width="48">
+                                <div class="max">
+                                    <span id="maxDegreeAfter" class="card-title2 m-0 pt-4 h2"></span><span>&deg;C</span>
+                                </div>
+
+                                <div class="min">
+                                    <small id="minDegreeAfter" class="text-secondary"></small> <span class="text-secondary">&deg;C</span>
+                                </div>
+
+
+                                <h6 id="condtionAfter" class="text-secondary mx-3 mt-3"></h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- --------------------------- -->
+
+        <!-- Footer -->
+        <div class="container-fluid footer">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- email Input-->
+                <div class="email col-md-8 py-3">
+                    <form class="d-flex justify-content-start email-form w-75">
+                        <input
+                            class="form-control mx-2 py-2 rounded-pill bg-secondary-subtle text-white border-1 border-primary"
+                            type="email" placeholder="Enter Your Email..." aria-label="mail">
+                        <button class="btn btn-primary text-white py-2  rounded-pill" type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="social-links fs-3 text-white">
+                        <a href="#"><i class="fa-brands fa-facebook text-white"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter text-white"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus text-white"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest text-white"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- ------ -->
+
+    </div>
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

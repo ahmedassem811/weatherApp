@@ -1,0 +1,76 @@
+/* *** *** Global CSS *** *** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.full-page{
+    background-color: #0099ff;
+    height: 100vh;
+}
+
+
+.navbar{
+    background-color: #273036 !important;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.site-description {
+    font-size: 10px !important; 
+}
+
+li{
+    margin: 0px 20px;
+}
+
+
+.search-form{
+    position: absolute;
+    top: 9%;
+    left:25%;
+}
+
+.s-btn{
+    position:absolute;
+    right: 0.9%;
+}
+
+.weather{
+    padding-bottom: 30px;
+}
+
+.card{
+    background-color: #273036 !important;
+    border: 0px;
+    border-radius: 30px;
+}
+
+.card-footer{
+    border: 0px;
+    border-radius: 30px;
+}
+
+.card-title{
+    font-size: 60px !important;
+}
+
+.footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #273036;
+    height: 8vh;
+}
+
+.footer-img{
+    width: fit-content;
+}
+
+
+
+
